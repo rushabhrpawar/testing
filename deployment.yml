@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: deployment
+    labels:
+       app: java
+spec:
+   replicas: 1
+   selector:
+       matchLabels:
+           app: java
+   template:
+       metadata:
+          name: java
+          labels:
+              app: java
+       spec:
+         containers:
+             - name: javaimage
+               image: rushabh6132/nodejs:latest
+
