@@ -5,10 +5,13 @@
 # add /target/docker-java-jenkins-project.jar docker-java-jenkins-project.jar
 # cmd [ "java", "jar", "docker-java-jenkins-project.jar" ]
 
-FROM httpd
+FROM centos:7
+run yum update -y
+run yum install httpd -y 
+run systemctl enable httpd && systemctl start httpd 
 label name="Rushabh"
 env email=rpawar@aurusinc.com
-run echo "welcome to new world of Jenkins Pipeline" > /usr/local/apache2/htdocs/index.html
+run echo "welcome to new world of Jenkins Pipeline" > /var/www/html/index.html
 expose 80
-expose 8080
+cmd [ "sh", "/bin/bash" ]
 
