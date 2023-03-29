@@ -9,7 +9,7 @@ FROM centos:7
 user root
 run yum update -y
 run yum install httpd -y 
-run  systemctl enable httpd && systemctl start httpd 
+run  systemctl enable httpd 
 label name="Rushabh"
 env email=rpawar@aurusinc.com
 run echo "welcome to new world of Jenkins Pipeline" > /var/www/html/index.html
