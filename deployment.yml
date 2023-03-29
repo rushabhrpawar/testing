@@ -17,5 +17,5 @@ spec:
        spec:
          containers:
              - name: javaimage
-               image: rushabh6132/nodejs:java
+               image: rushabh6132/nodejsapp:java
 
