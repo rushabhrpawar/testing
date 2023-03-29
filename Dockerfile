@@ -8,7 +8,7 @@
 FROM httpd
 label name="Rushabh"
 env email=rpawar@aurusinc.com
-run echo "welcome to new world of Jenkins Pipeline" > /htdocs/index.html
+run echo "welcome to new world of Jenkins Pipeline" > /usr/local/apache2/htdocs/index.html
 expose 80
 expose 8080
 cmd [ "httpd", "-D" "foreground" ]
