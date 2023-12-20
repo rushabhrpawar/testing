@@ -14,5 +14,13 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <build>
+        <plugin>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.0.0</version>
+        </plugin>
+    </build>
     <packaging>war</packaging>
+
+
 </project>
